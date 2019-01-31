@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'org.web3j' version '0.1.6'
+    id "org.sonarqube" version "2.7"
 }
 
 group 'org.web3j'
@@ -26,4 +27,8 @@ dependencies {
     compile "ch.qos.logback:logback-core:$logbackVersion",
             "ch.qos.logback:logback-classic:$logbackVersion"
     testCompile "junit:junit:$junitVersion"
+}
+sonarqube {
+    properties {
+        property "sonar.projectKey", "Sample 1"    }
 }
